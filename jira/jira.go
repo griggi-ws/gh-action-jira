@@ -9,7 +9,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/tomhjp/gh-action-jira/config"
+	"github.com/griggi-ws/gh-action-jira/config"
 )
 
 func DoRequest(config config.JiraConfig, method, path string, query url.Values, body io.Reader) ([]byte, error) {

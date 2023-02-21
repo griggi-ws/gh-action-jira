@@ -19,7 +19,7 @@ func DoRequest(config config.JiraConfig, method, path string, query url.Values, 
 	}
 	req.Header.Add("Accept", "application/json")
 	req.Header.Add("Content-Type", "application/json")
-	req.Header.Add("Authorization", "Basic "+base64.StdEncoding.EncodeToString([]byte(fmt.Sprintf("%s:%s", config.UserEmail, config.APIToken))))
+	req.Header.Add("Authorization", "Bearer "+config.APIToken)
 
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {

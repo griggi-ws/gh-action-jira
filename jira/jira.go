@@ -1,7 +1,6 @@
 package jira
 
 import (
-	"encoding/base64"
 	"fmt"
 	"io"
 	"io/ioutil"
